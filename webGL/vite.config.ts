@@ -8,10 +8,12 @@ export default defineConfig({
   base: "./",
 
   plugins: [react(), legacy()],
-  alias: {
-    "@": "/src",
-    "@components": "/src/components",
-    "@utils": "src/utils"
+  resolve: {
+    alias: {
+      "@": "/src",
+      "@components": "/src/components",
+      "@utils": "src/utils"
+    }
   },
   build: {
     outDir: "dist",
