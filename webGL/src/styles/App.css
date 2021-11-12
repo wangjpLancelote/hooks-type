@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import 'antd/dist/antd.css';
+@import './container.less';
 
 .App {
   text-align: center;
