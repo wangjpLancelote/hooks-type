@@ -5,14 +5,9 @@ import '@/styles/App.css'
 import '@/styles/index.css'
 import Home from '@/pages/Home/Index';
 import Menu from '@/components/Menu/Index';
+import Sea from '@/pages/Sea/Index';
+import Cube from './pages/Cube/Index';
 import * as THREE from 'three';
-// require('three/examples/jsm/loaders/DRACOLoader');
-// require('three/examples/jsm/loaders/DDSLoader');
-// require('three/examples/jsm/loaders/GLTFLoader');
-// require('three/examples/jsm/controls/OrbitControls');
-// require('three/examples/jsm/controls/TrackballControls');
-// require('three/examples/jsm/loaders/RGBELoader');
-// require('three/examples/jsm/loaders/HDRCubeTextureLoader');
 
 /** vite 引入examples文件 */
 import.meta.globEager('../node_modules/three/examples/jsm/loaders/DRACOLoader')
@@ -39,6 +34,8 @@ function App() {
           <Menu>
             <Switch>
               <Route exact strict path="/" component={Home} />
+              <Route exact strict path="/sea" component={Sea} />
+              <Route exact strict path="/cube" component={Cube} />
               <Redirect from="/*" to="/" />
             </Switch>
           </Menu>
