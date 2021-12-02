@@ -25,9 +25,13 @@ interface ICube {
 }
 const Cube = (props: ICube) => {
   const scene = new Scene(); // 场景
-  const camera = new PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000); // 相机
+  const camera = new PerspectiveCamera(75, window.innerWidth/window.innerHeight / 2, 0.1, 1000); // 相机
   const render = new WebGLRenderer(); // 渲染器
-  render.setSize(window.innerWidth, window.innerHeight);
+  render.autoClear = true;
+  render.autoClearColor = true;
+  // render.setSize(window.innerWidth, window.innerHeight);
+  render.setSize(400, 400);
+  // render.setViewport(50, 50, 100, 100);
 
   const ref = document.getElementById('renderBox');
   ref?.appendChild(render.domElement);
@@ -40,6 +44,8 @@ const Cube = (props: ICube) => {
 
 
   scene.add(cube);
+
+  // render.render(scene, camera);
 
   const animate = () => {
     requestAnimationFrame(animate);
@@ -57,7 +63,7 @@ const Cube = (props: ICube) => {
   
   return (
     <div className="container">
-      <div className="renderBox" id="renderBox">
+      <div className="renderBoxEl" id="renderBox">
       </div>
     </div>
   )
