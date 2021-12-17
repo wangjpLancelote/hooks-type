@@ -23,7 +23,8 @@ const shaders = Shaders.create({
     uniform float blue;
     void main() {
     gl_FragColor = vec4(uv.x, uv.y, blue, 1.0);
-    }`
+    }`,
+    vert: GLSL``
     }
 })
 

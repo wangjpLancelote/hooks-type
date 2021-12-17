@@ -35,7 +35,6 @@ const Sea = (props: ISea) => {
     scene.add(plane);
 
     renderDom.setSize(box?.clientWidth || 0, box?.clientHeight || 0);
-    
 
     box?.appendChild(renderDom.domElement);
 
